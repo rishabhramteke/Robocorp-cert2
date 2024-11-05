@@ -87,16 +87,6 @@ def screenshot_robot(order_number):
 def embed_screenshot_to_receipt(screenshot, pdf_file):
     """Embed the screenshot to the pdf file"""
     pdf = PDF()
-    # Create a list of files to merge: original pdf and screenshot
-    # files = [
-    #     pdf_file,
-    #     screenshot
-    # ]
-    # # Create a new PDF with both files
-    # pdf.add_files_to_pdf(
-    #     files=files,
-    #     target_document=pdf_file
-    # )
     pdf.add_watermark_image_to_pdf(
         image_path=screenshot,
         source_path=pdf_file,
